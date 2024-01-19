@@ -1,0 +1,39 @@
+.trustedBy {
+    background-color: #fafafa;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    .container {
+      max-width: 760px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: rgb(200, 200, 200);
+      font-weight: 500;
+
+      span{
+        @media (max-width: 768px) {
+            margin-left: 10px;
+          }
+      }
+  
+      img {
+        height: 50px;
+        object-fit: contain;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        overflow-x: auto;
+        justify-content: flex-start;
+  
+        img {
+          height: 40px; /* Adjust the height of the images for smaller screens */
+          margin-right: 10px; /* Add margin to each image except the last one */
+        }
+      }
+    }
+  }
+  

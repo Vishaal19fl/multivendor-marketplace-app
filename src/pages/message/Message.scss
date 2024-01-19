@@ -1,0 +1,171 @@
+.message{
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    .container{
+        width: 1200px;
+        margin: 50px;
+        
+
+        ::-webkit-scrollbar {
+            width: 10px; 
+          }
+    
+          ::-webkit-scrollbar-thumb {
+            background-color: rgb(162, 53, 20); 
+            border-radius: 5px; 
+          }
+    
+          ::-webkit-scrollbar-track {
+            background-color: #f0f0f0; 
+          }
+        .breadcrumbs{
+            font-weight: 300;
+            font-size: 13px;
+            color: #555;
+        }
+        .messages{
+            margin: 30px 0px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 500px;
+            overflow-y: scroll;
+
+            
+
+            .item{
+                display: flex;
+                gap: 20px;
+                max-width: 600px;
+                font-size: 18px;
+
+                &.owner{
+                    flex-direction: row-reverse;
+                    align-self: flex-end;
+
+                    p{
+                        border-radius: 20px 0px 20px 20px;
+                        background-color: royalblue;
+                        color: white;
+                    }
+                }
+
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                p{
+                    padding: 20px;
+                    background-color: lightgray;
+                    border-radius: 0px 20px 20px 20px;
+                }
+            }
+
+            
+        }
+
+        hr {
+            height: 0;
+            border: 0.5px solid rgb(232, 230, 230);
+            margin-bottom: 20px;
+          }
+          .write {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+      
+            textarea {
+              width: 80%;
+              height: 100px;
+              padding: 10px;
+              border: 1px solid lightgray;
+              border-radius: 10px;
+            }
+      
+            button{
+              background-color: rgb(162, 53, 20);
+              padding: 20px;
+              color: white;
+              font-weight: 500;
+              border: none;
+              border-radius: 10px;
+              cursor: pointer;
+              width: 100px;
+            }
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            margin: 20px;
+
+            ::-webkit-scrollbar {
+                width: 10px; 
+              }
+        
+              ::-webkit-scrollbar-thumb {
+                background-color: rgb(162, 53, 20); 
+                border-radius: 5px; 
+              }
+        
+              ::-webkit-scrollbar-track {
+                background-color: #f0f0f0; 
+              }
+      
+            .breadcrumbs {
+              font-size: 12px;
+            }
+      
+            .messages {
+              padding: 20px;
+              height: 300px; 
+              overflow-y: scroll;
+            }
+      
+            .item {
+              flex-direction: column;
+              gap: 10px;
+              max-width: 100%;
+
+              &.owner{
+                flex-direction: column;
+                gap:10px;
+                max-width: 100%;
+                align-self: flex-end;
+            }
+      
+              img {
+                width: 100%; /* Make the image take full width */
+              }
+      
+              p {
+                padding: 10px;
+              }
+            }
+      
+            .write {
+              flex-direction: column;
+              align-items: center;
+      
+              textarea {
+                width: 90%;
+                font-size: 20px;
+                height: 25px;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+              }
+      
+              button {
+                font-size: 19px;
+                margin-top: 5px;
+                padding: 15px 20px;
+              }
+            }
+    }
+}
+}

@@ -1,0 +1,103 @@
+.myGigs {
+    display: flex;
+    justify-content: center;
+  
+    .container {
+      width: 1400px;
+      padding: 50px 0px;
+  
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        button {
+          background-color: rgb(162, 53, 20);
+          color: white;
+          font-weight: 500;
+          border: none;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+  
+      table {
+        width: 100%;
+        margin-top: 20px;
+  
+        tr {
+          height: 50px;
+  
+          th {
+            text-align: left;
+          }
+  
+          td {
+            .image {
+              width: 50px;
+              height: 25px;
+              object-fit: cover;
+            }
+  
+            .delete {
+              width: 20px;
+              cursor: pointer;
+            }
+          }
+  
+          &:nth-child(even) {
+            background-color: #1d1f1e0f;
+          }
+        }
+      }
+  
+      // Mobile responsiveness
+      @media (max-width: 768px) {
+        width: 100%; // Make the container full width on mobile
+        padding: 20px; // Adjust padding for better spacing on mobile
+  
+        .title {
+          flex-direction: column; // Stack the title items vertically on mobile
+  
+          button {
+            margin-top: 10px; // Add spacing between title items on mobile
+          }
+        }
+  
+        table {
+          margin-top: 10px; 
+
+          tr {
+            height: 60px;
+    
+            th {
+              text-align: left;
+              font-size: 13px;
+            }
+    
+            td {
+                font-size: 12px;
+                padding: 5px;
+              .image {
+                width: 50px;
+                height: 25px;
+                
+                object-fit: cover;
+              }
+    
+              .delete {
+                width: 20px;
+                cursor: pointer;
+              }
+            }
+    
+            &:nth-child(even) {
+              background-color: #1d1f1e0f;
+            }
+          }
+        }
+      }
+    }
+  }
+  
