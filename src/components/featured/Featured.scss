@@ -24,6 +24,10 @@
             flex-direction: column;
             gap: 30px;
 
+            .btn{
+                border: none;
+            }
+
             @media (max-width: 768px) {
                 justify-content: center;
                 align-items: center;
